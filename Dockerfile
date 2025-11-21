@@ -3,7 +3,7 @@ WORKDIR /app
 ARG CONTAINER_PORT
 COPY pom.xml /app
 RUN mvn dependency:resolve
-COPY. /app
+COPY . /app
 RUN mvn clean
 RUN mvn package -DskipTests -X
 
